@@ -20,15 +20,20 @@ body {
 /* Banner */
 .banner {
   height: 320px;
-  background-image: Url(Lilia.jpeg);
+  background-image: url(Lilia.jpeg);
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.banner-wrapper {
   position: relative;
 }
 
 .banner-overlay {
   position: absolute;
   inset: 0;
+  background: rgba(255, 255, 255, 0.237);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,8 +41,27 @@ body {
   text-align: center;
 }
 
-.banner h1 {
+.banner-overlay h1 {
   font-family: "Playfair Display", serif;
+  font-size: 50px;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 320px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner h1 {
   font-size: 2.6rem;
   color: #fdfcff;
   margin: 0;
@@ -47,13 +71,6 @@ body {
   color: #f1ecf7;
   font-size: 1.1rem;
   margin-top: 10px;
-}
-
-.banner h1,
-.banner p {
-  text-shadow:
-    0 0 4px rgba(0, 0, 0, 0.7),
-    0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Inhalt */
