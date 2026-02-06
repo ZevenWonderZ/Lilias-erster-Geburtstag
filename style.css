@@ -1,7 +1,6 @@
 /* Grundlayout */
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
   background-color: #f3f0f6;
   background-image:
     radial-gradient(
@@ -32,19 +31,22 @@ body {
   text-align: center;
 }
 
-.banner-overlay h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 50px;
+.banner-overlay {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .banner-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  width: 100%;
-  height: min(40vh, 400px);
-  aspect-ratio: 6 / 2; /* Breite : Höhe */
-  overflow: hidden;
+  aspect-ratio: 6 / 2;
 }
 
 .banner-grid img {
@@ -119,5 +121,6 @@ footer {
   font-size: 0.9rem;
   color: #6c6474;
 }
+
 
 
