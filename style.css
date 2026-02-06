@@ -41,8 +41,9 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  height: 320px;
   width: 100%;
+  height: min(40vh, 400px);
+  aspect-ratio: 6 / 2; /* Breite : Höhe */
   overflow: hidden;
 }
 
@@ -118,4 +119,5 @@ footer {
   font-size: 0.9rem;
   color: #6c6474;
 }
+
 
